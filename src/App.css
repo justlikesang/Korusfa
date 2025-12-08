@@ -2,9 +2,36 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-section {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  .nav-bar {
+    display: flex;
+    padding: 18px 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 140px;
+    .nav-logo {
+      height: 60px;
+    }
+    .links-container {
+      list-style-type: none;
+      display: flex;
+      padding: 0;
+      margin-top: 10px;
+      li {}
+      .link {
+        text-decoration: none;
+        padding: 15px;
+        color: #777;
+        line-height: 25px;
+        font-weight: 600;
+        &.active {
+          color: #222;
+        }
+      }
+    }
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
