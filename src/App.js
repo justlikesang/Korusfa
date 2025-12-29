@@ -2,18 +2,12 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
-import Services from './components/Services.js';
-
-// function Services() {
-//   return <h2>Services Page</h2>;
-// }
-
-function Approach() {
-  return <h2>About Page</h2>;
-}
+import Services from './components/Services';
+import Approach from './components/Approach';
+import Team from './components/Team';
+import ContactUs from './components/ContactUs';
 
 function App() {
-
   const [activeLink, setActiveLink] = useState('/');
 
   return (
@@ -29,7 +23,6 @@ function App() {
           </Link>
           <ul className="links-container">
             <li>
-              {/* client-side navigation */}
               <Link
                 className={
                   'link ' + (activeLink === 'services' ? 'active' : '')
@@ -42,24 +35,89 @@ function App() {
             </li>
             <li>
               <Link
-                className={'link ' + (activeLink === 'approach' ? 'active' : '')}
+                className={
+                  'link ' + (activeLink === 'approach' ? 'active' : '')
+                }
                 onClick={() => setActiveLink('approach')}
                 to="/approach"
               >
                 Approach
               </Link>
             </li>
+            <li>
+              <Link
+                className={'link ' + (activeLink === 'team' ? 'active' : '')}
+                onClick={() => setActiveLink('team')}
+                to="/team"
+              >
+                Team
+              </Link>
+            </li>
+            <li>
+              {/* client-side navigation */}
+              <Link
+                className={'link ' + (activeLink === 'contact' ? 'active' : '')}
+                onClick={() => setActiveLink('contact')}
+                to="/contact"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
 
-      <Home />
-
       <div>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/approach" element={<Approach />} />
+          <Route path="/approach" element={<Team />} />
+          <Route path="/approach" element={<ContactUs />} />
         </Routes>
+      </div>
+
+      <div className="footer-section">
+        <div className="footer-hero-text-container">
+          <h2>
+            To Unite our clients across The Pacific with apt Capital and Partner
+            opportunity
+          </h2>
+          <br />
+          <h3>KORUS becomes UTP - Unite The Pacific</h3>
+          <div className="contact-us-container">
+            <img src="/public/contact_us" />
+          </div>
+        </div>
+        <div className="copy-right-wrapper">
+          <div className="copy-right-container">
+            <div className="copy-right">
+              © {new Date().getFullYear()} KORUS Partners. All rights reserved
+            </div>
+            <div className="links">
+              <ul id="footer-links">
+                <li>
+                  <Link
+                    className="links"
+                    onClick={() => setActiveLink('approach')}
+                    to="/approach"
+                  >
+                    Approach
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className="links"
+                    onClick={() => setActiveLink('contact')}
+                    to="/contact"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
