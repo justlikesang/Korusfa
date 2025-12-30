@@ -29,6 +29,9 @@ const Home = () => {
             relationships and objective guidance to privately held Technology
             and Healthcare companies.
           </p>
+
+          <br />
+
           <p>We offer comprehensive services to our clients including:</p>
           <ul>
             <li>mergers & acquisitions advisory</li>
@@ -42,7 +45,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="image-content" style={{ backgroundImage: "url('/invest_image.jpg')" }}/>
+        <div
+          className="image-content"
+          style={{ backgroundImage: "url('/invest_image.jpg')" }}
+        />
       </div>
     </div>
   );

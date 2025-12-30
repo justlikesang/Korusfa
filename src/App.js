@@ -72,21 +72,30 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/approach" element={<Approach />} />
-          <Route path="/approach" element={<Team />} />
-          <Route path="/approach" element={<ContactUs />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
 
       <div className="footer-section">
-        <div className="footer-hero-text-container">
+        <div
+          className="footer-hero-text-container"
+          style={{ backgroundImage: 'url(/footer_background.jpg)' }}
+        >
           <h2>
-            To Unite our clients across The Pacific with apt Capital and Partner
+            To unite our clients across the Pacific with apt Capital and Partner
             opportunity
           </h2>
           <br />
           <h3>KORUS becomes UTP - Unite The Pacific</h3>
           <div className="contact-us-container">
-            <img src="/public/contact_us" />
+            <Link onClick={() => setActiveLink('contact')} to='/contact'>
+              <img
+                className="contact-us-btn"
+                src="/contact_us.jpg"
+                alt=""
+              />
+            </Link>
           </div>
         </div>
         <div className="copy-right-wrapper">
