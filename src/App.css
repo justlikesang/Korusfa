@@ -97,6 +97,14 @@ p {
   }
   .member {
     padding: 0 15px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    p {
+      margin-top: 6px;
+      font-weight: 500;
+    }
   }
   .past-capital-container {}
   .major-past-exits {

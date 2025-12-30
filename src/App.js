@@ -10,6 +10,11 @@ import ContactUs from './components/ContactUs';
 function App() {
   const [activeLink, setActiveLink] = useState('/');
 
+  const onClickContent = (link) => {
+    window.scrollTo(0, 0);
+    setActiveLink(link);
+  };
+
   return (
     <div className="App">
       <div className="nav-section">
@@ -54,7 +59,6 @@ function App() {
               </Link>
             </li>
             <li>
-              {/* client-side navigation */}
               <Link
                 className={'link ' + (activeLink === 'contact' ? 'active' : '')}
                 onClick={() => setActiveLink('contact')}
@@ -67,6 +71,7 @@ function App() {
         </nav>
       </div>
 
+      {/* Main body contents */}
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -89,12 +94,8 @@ function App() {
           <br />
           <h3>KORUS becomes UTP - Unite The Pacific</h3>
           <div className="contact-us-container">
-            <Link onClick={() => setActiveLink('contact')} to='/contact'>
-              <img
-                className="contact-us-btn"
-                src="/contact_us.jpg"
-                alt=""
-              />
+            <Link onClick={() => onClickContent('contact')} to="/contact">
+              <img className="contact-us-btn" src="/contact_us.jpg" alt="" />
             </Link>
           </div>
         </div>
@@ -108,7 +109,7 @@ function App() {
                 <li>
                   <Link
                     className="links"
-                    onClick={() => setActiveLink('approach')}
+                    onClick={() => onClickContent('approach')}
                     to="/approach"
                   >
                     Approach
@@ -117,7 +118,7 @@ function App() {
                 <li>
                   <Link
                     className="links"
-                    onClick={() => setActiveLink('contact')}
+                    onClick={() => onClickContent('contact')}
                     to="/contact"
                   >
                     Contact Us

@@ -25,31 +25,39 @@ const Team = () => {
         <div className="team-container">
           <div className="members-section">
             <div className="member">
-              <img src="/tony_huang.jpg" alt="" />
-              <p>Tony Huang, Partner</p>
+              <a href="https://www.linkedin.com/in/tonyhuang/" target="_blank" rel="noreferrer">
+                <img src="/tony_huang.jpg" alt="" />
+                <p>Tony Huang, Partner</p>
+              </a>
             </div>
             <div className="member">
-              <img src="/don_suh.jpg" alt="" />
-              <p>Don Suh, Partner</p>
+              <a href="https://www.linkedin.com/in/don-suh-65219664/" target="_blank" rel="noreferrer">
+                <img src="/don_suh.jpg" alt="" />
+                <p>Don Suh, Partner</p>
+              </a>
             </div>
             <div className="member">
-              <img src="/jonathan_hull.jpg" alt="" />
-              <p>Jonathan Hull, Partner</p>
+              <a href="/jonathan_hull_resume.png" target="_blank" rel="noreferrer">
+                <img src="/jonathan_hull.jpg" alt="" />
+                <p>Jonathan Hull, Partner</p>
+              </a>
             </div>
             <div className="member">
-              <img src="/joon_lee.jpg" alt="" />
-              <p>Joon Lee, Partner</p>
+              <a href="/joon_lee_resume.png" target="_blank" rel="noreferrer">
+                <img src="/joon_lee.jpg" alt="" />
+                <p>Joon Lee, Partner</p>
+              </a>
             </div>
           </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div className="past-capital-container">
           <h2>Major Past Capital Raises</h2>
           <img src="/past_capital.jpg" alt="" />
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div className="major-past-exits">
           <h2>Major Past Exits</h2>
           <img src="/major_past_exits.jpg" alt="" />
